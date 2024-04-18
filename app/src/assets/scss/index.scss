@@ -1,11 +1,11 @@
-@use "_default" as *;
-@use "_fonts" as *;
-@use "_variables" as *;
-@use "components/_header" as *;
-@use "components/_hero" as *;
-@use "components/_about" as *;
-@use "components/_advantages" as *;
-@use "components/_subscribe" as *;
-@use "components/_footer" as *;
+@use "_default";
+@use "_fonts";
+@use "_variables";
+@use "components/_header";
+@use "components/_hero";
+@use "components/_about";
+@use "components/_advantages";
+@use "components/_subscribe";
+@use "components/_footer";
 
 @import "normalize.css";

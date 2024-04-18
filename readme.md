@@ -43,3 +43,12 @@ Setting:
 [default max css](https://codepen.io/Quper/pen/GRRZzWy)
 
 [google-webfonts-helper](https://gwfh.mranftl.com/fonts)
+
+
+### Day 3
+Стили + адаптив
+
+Полезные ссылки:\
+[https://tinypng.com/](https://tinypng.com/)
+
+[https://squoosh.app/](https://squoosh.app/)

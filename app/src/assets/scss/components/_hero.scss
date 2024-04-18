@@ -1,18 +1,62 @@
 @use "../_variables" as *;
+@use "../media" as *;
 
 .hero {
-    padding: 218px 245px;
-    color: $light;
-    background-color: $purple;
-    background-image: url("/assets/img/bg-dog.png"), url("/assets/img/pattern.svg");
-    background-size: contain, cover;
-    background-repeat: no-repeat;
-    background-position: right, center;
-    &__text {
-        max-width: 420px;
+  padding: 218px 245px;
+  color: $light;
+  background-color: $purple;
+  background-image: url("/assets/img/bg-dog.png"), url("/assets/img/pattern.svg");
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position:
+    right bottom,
+    center;
+
+  @include laptop {
+    padding: 148px 0 172px;
+    background-image: url("/assets/img/bg-dog-laptop.png"), url("/assets/img/pattern.svg");
+  }
+
+  @include tablet {
+    padding: 148px 0 461px;
+    background-image: url("/assets/img/bg-dog-tablet.png"), url("/assets/img/pattern.svg");
+    background-size:
+      655px 564px,
+      cover;
+  }
+
+  @include mobile {
+    padding: 100px 0 284px;
+    background-image: url("/assets/img/bg-dog-mobile.png"), url("/assets/img/pattern.svg");
+    background-size:
+      294px 261px,
+      cover;
+  }
+
+  &__text {
+    max-width: 420px;
+    @include laptop {
+      max-width: 360px;
     }
-    &__title {
-        max-width: 810px;
-        margin-bottom: 50px;
+  }
+
+  &__title {
+    width: 810px;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    @media (max-width: 1300px) {
+      width: 660px;
     }
+
+    @include laptop {
+      margin-bottom: 32px;
+      width: 588px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      width: 292px;
+    }
+  }
 }
