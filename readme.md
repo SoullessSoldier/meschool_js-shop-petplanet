@@ -19,3 +19,27 @@ npm create vite@latest
 Ссылки:
 
 [Типограф](https://www.artlebedev.ru/typograf/)
+
+
+### Day 2
+SCSS - Normalize, Default, Fonts
+```
+npm i -D sass
+npm i normalize.css
+```
+
+Шрифты в *public*. Предзагрузка шрифтов через тег *link*
+
+Плагин VS Code eCSStractor\
+Setting:
+```json
+"ecsstractor_port.attributes": "class"
+"ecsstractor_port.bem_nesting": true
+"ecsstractor_port.comment_style": "scss"
+```
+Полезные ссылки:\
+[normalize.css](https://necolas.github.io/normalize.css/)
+
+[default max css](https://codepen.io/Quper/pen/GRRZzWy)
+
+[google-webfonts-helper](https://gwfh.mranftl.com/fonts)

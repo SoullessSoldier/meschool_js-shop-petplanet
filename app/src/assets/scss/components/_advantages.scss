@@ -1,0 +1,41 @@
+@use "../_variables" as *;
+
+.advantages {
+  // .advantages__bg
+
+  &__bg {
+    padding-top: 245px;
+    color: $light;
+    background-color: $carrot;
+    background-image: url("/assets/img/pattern.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px 50px 0 0;
+  }
+
+  // .advantages__title
+
+  &__title {
+  }
+
+  // .advantages__list
+
+  &__list {
+  }
+
+  // .advantages__item
+
+  &__item {
+  }
+
+  // .advantages__subtitle
+
+  &__subtitle {
+  }
+
+  // .advantages__text
+
+  &__text {
+  }
+}
