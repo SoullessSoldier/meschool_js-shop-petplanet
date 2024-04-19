@@ -6,11 +6,19 @@
   color: $light;
   background-color: $purple;
   background-image: url("/assets/img/bg-dog.png"), url("/assets/img/pattern.svg");
-  background-size: contain, cover;
-  background-repeat: no-repeat;
+  background-size: contain, auto;
+  background-repeat: no-repeat, repeat;
   background-position:
     right bottom,
     center;
+
+  @include widescreen {
+    background-image: url("/assets/img/bg-dog-widescreen.png"), url("/assets/img/pattern.svg");
+    background-position:
+      left 48vw bottom 0,
+      center;
+    background-size: 1850px, auto;
+  }
 
   @include laptop {
     padding: 148px 0 172px;

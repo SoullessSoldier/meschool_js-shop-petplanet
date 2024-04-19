@@ -8,6 +8,14 @@
 
 Для сборки и оптимизации проекта  воспользуешься инструментом Vite и npm пакетами. А проект будет структурирован таким образом, чтобы его можно было дополнять и развивать дальше. Это особенно актуально для будущего создания интернет-магазина.
 
+Запуск:
+```
+cd app
+npm i
+npm run dev
+```
+
+
 ### Day 1
 Начинаем проект / HTML
 ```
@@ -52,3 +60,40 @@ Setting:
 [https://tinypng.com/](https://tinypng.com/)
 
 [https://squoosh.app/](https://squoosh.app/)
+
+
+### Day 4
+Оптимизация\
+Адаптив под большие экраны (доделать)
+
+```
+npm i -D vite-plugin-image-optimizer
+npm i -D sharp
+npm i -D svgo
+```
+Поправили конфиг этого плагина в vite.config.js, при сборке изображения уменьшаются.
+
+Вручную изображения оптимизируются через [squash.io](https://squoosh.app/),\
+либо вручную через js-библиотеку **sharp**
+
+Использование свойства background-image: image-set для прописки изображений разного\
+(или одного) формата - для DPR 2.0 (Retina-дисплей) 
+```css
+/** сверху всегда самый оптимальный вариант */
+background-image: image-set(
+      url("/assets/img/dog.avif") type("image/avif") 1x,
+      url("/assets/img/dog@2x.avif") type("image/avif") 2x,
+      url("/assets/img/dog.webp") type("image/webp") 1x,
+      url("/assets/img/dog@2x.webp") type("image/webp") 2x,
+      url("/assets/img/dog.png") type("image/png") 1x,
+      url("/assets/img/dog@2x.png") type("image/png") 2x
+    );
+```
+
+Тест производительности - Litehouse в Dev tools,\
+запускать не на "npm run dev"-режиме (в preview) и в режиме инкогнито.
+
+
+Ссылки из урока\
+[https://www.npmjs.com/package/vite-plugin-image-optimizer](https://www.npmjs.com/package/vite-plugin-image-optimizer)
+

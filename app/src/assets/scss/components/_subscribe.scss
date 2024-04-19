@@ -1,8 +1,16 @@
 @use "../_variables" as *;
+@use "../_media" as *;
 
 .subscribe {
   padding: 120px 0;
-  // .subscribe__form
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 80px 0;
+  }
 
   &__form {
     display: flex;
@@ -17,6 +25,15 @@
     font-weight: 700;
     line-height: 1.3;
     text-align: center;
+
+    @include laptop {
+      margin-bottom: 32px;
+      font-size: 44px;
+    }
+
+    @include laptop {
+      font-size: 30px;
+    }
   }
 
   &__field {
@@ -29,7 +46,7 @@
   }
 
   &__input {
-    padding: 16px 32px;
+    padding: 14px 30px;
     width: 100%;
     font-weight: 400;
     font-size: inherit;
@@ -43,16 +60,16 @@
     }
   }
 
-  // .subscribe__button
-
   &__button {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     padding: 16px 31px;
+    min-width: 209px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
     border-radius: 40px;
     color: $light;
@@ -61,12 +78,24 @@
     color: $light;
     background-color: $purple;
     border: 1px solid transparent;
+
+    @include mobile {
+      padding: 0;
+      min-width: 54px;
+    }
+
     &::after {
       content: "";
       display: block;
       width: 16px;
       height: 16px;
       background-image: url("/assets/img/arrow-up.svg");
+    }
+  }
+  &__button-text {
+    @include mobile {
+      position: fixed;
+      scale: 0;
     }
   }
 }
