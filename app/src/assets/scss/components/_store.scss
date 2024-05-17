@@ -6,14 +6,15 @@
   padding-bottom: 120px;
 
   &__header {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__categories {
     display: flex;
     gap: 28px;
-  }
-
-  &__category-item {
   }
 
   &__category-button {
@@ -40,18 +41,49 @@
   }
 
   &__cart-button {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 28px;
     color: $carrot;
   }
 
+  &__cart-count {
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: $light;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 2;
+  }
+
+  &__cart-icon {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
   &__title {
+    margin-bottom: 32px;
+    font-size: 52px;
+    font-weight: 700;
+    color: $green;
   }
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 420px);
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
-  }
-
-  &__product {
+    display: flex;
   }
 }

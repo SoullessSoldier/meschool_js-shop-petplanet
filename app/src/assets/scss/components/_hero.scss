@@ -59,6 +59,10 @@
     margin-bottom: 60px;
     max-width: 440px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @include widescreen {
       max-width: 540px;
     }

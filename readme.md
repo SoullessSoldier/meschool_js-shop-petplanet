@@ -101,3 +101,6 @@ background-image: image-set(
 ### Part 2 - Day 1
 Вёрстка по макету
 
+### Part 2 - Day 2
+доработка стилизации\
+Работа с API
