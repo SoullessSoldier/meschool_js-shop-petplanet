@@ -1,11 +1,18 @@
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
   root: "./src",
   publicDir: "../public",
   build: {
     outDir: "../docs",
+    rollupOptions: {
+      input: {
+        main: "./src/index.html",
+        store: "./src/store.html",
+      },
+    },
   },
   plugins: [
     ViteImageOptimizer({

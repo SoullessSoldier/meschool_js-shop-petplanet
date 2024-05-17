@@ -104,3 +104,29 @@ background-image: image-set(
 ### Part 2 - Day 2
 доработка стилизации\
 Работа с API
+
+### Part 2 - Day 3
+Категории и модальное окно корзины\
+localStorage, encodeURIComponent
+
+**Для того, чтобы файл store.html оказался в билде, надо поправить vite.config.js (добавить rollupOptions):**
+```
+build: {
+    outDir: "../docs",
+    rollupOptions: {
+      input: {
+        main: "./src/index.html",
+        store: "./src/store.html",
+      },
+    },
+  },
+```
+если билд будет ругаться, то попробовать через resolve:
+```
+...
+input: {
+  main: resolve(__dirname, "./src/index.html"),
+  store: resolve(__dirname, "./src/store.html"),
+}
+...
+```

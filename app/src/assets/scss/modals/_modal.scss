@@ -1,0 +1,41 @@
+@use "../_variables" as *;
+@use "../media" as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(black, 0.7);
+  z-index: 999;
+
+  &__close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 36px;
+    color: $white;
+  }
+}
+.modal {
+  padding: 20px;
+  width: 80vw;
+  max-width: 600px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(black, 0.3);
+  &__content {
+  }
+
+  &__title {
+  }
+
+  &__cart-items {
+  }
+  &__cart-item-title {
+    color: $green;
+    font-size: 16px;
+    text-align: left;
+  }
+}
