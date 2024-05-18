@@ -110,3 +110,23 @@ iframe {
     padding: 0 14px;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  padding: 20px 10px;
+  display: none;
+  // align-items: center;
+  // justify-content: center;
+  background-color: rgba(black, 0.7);
+  overflow: auto;
+  z-index: 999;
+
+  &__close-button {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    font-size: 36px;
+    color: $white;
+  }
+}

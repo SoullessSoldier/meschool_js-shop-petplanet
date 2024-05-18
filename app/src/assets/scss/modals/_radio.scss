@@ -1,0 +1,40 @@
+@use "../_variables" as *;
+
+.radio {
+  position: relative;
+  display: block;
+  padding-right: 16px;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    appearance: none;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      display: block;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $green;
+    }
+
+    &:checked::before {
+      background-color: $green;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green;
+    }
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+}
